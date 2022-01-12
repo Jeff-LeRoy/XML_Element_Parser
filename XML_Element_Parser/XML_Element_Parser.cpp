@@ -172,6 +172,5 @@ void MyFrame::copy(wxKeyEvent& event)
             wxTheClipboard->Close();
         }
     }
-    //SetStatusText("you pressed C");
 }
 
