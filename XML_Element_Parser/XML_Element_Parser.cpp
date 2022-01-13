@@ -51,8 +51,6 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
 
     //GUI buttons and elements
     wxPanel* mainPanel = new wxPanel(this, wxID_ANY);
-    //mainPanel->Bind(wxEVT_CHAR_HOOK, &MyFrame::copy, this);
-    //mainPanel->Bind(wxEVT_KEY_DOWN, &MyFrame::copy, this);
 
     m_buttonParse = new wxButton(mainPanel, 101, "Parse", wxPoint(88, 10), wxSize(68, 50));
     Bind(wxEVT_BUTTON, &MyFrame::OnParse, this, m_buttonParse->GetId());
