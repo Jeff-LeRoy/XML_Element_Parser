@@ -12,7 +12,6 @@ public:
 class MyFrame : public wxFrame
 {
 public:
-    //Constructor
     MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
 
 private:
@@ -35,21 +34,4 @@ private:
 
     //XML Document
     wxXmlDocument doc;
-
-    //wxDECLARE_EVENT_TABLE();
-};
-
-//defining event table
-//wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
-//    EVT_MENU(wxID_EXIT, MyFrame::OnExit)
-//wxEND_EVENT_TABLE()
-
-
-class Shortcuts
-{
-public:
-    //void copy(wxKeyEvent& event);
-
-private:
-
 };
