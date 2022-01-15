@@ -6,7 +6,7 @@ A tool to query and list XML nodes of a user defined element name to a listbox. 
 * Print out nodes of user defined element name
 * Print all nodes 
 * Print line of non symmetrical nodes
-* Copy XML text from listbox
+* Copy entry from listbox to clipboard
 
 ## Example
 
