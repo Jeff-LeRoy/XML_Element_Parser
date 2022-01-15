@@ -11,3 +11,4 @@ A tool to query and list XML nodes of a user defined element name to a listbox. 
 ## Example
 
 ## Installation
+Requires [wxWidgets](https://www.wxwidgets.org/downloads/) GUI library 
