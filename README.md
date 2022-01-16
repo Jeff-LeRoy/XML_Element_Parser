@@ -10,4 +10,4 @@ A tool to query and list XML nodes of a user defined element name to a listbox. 
 ## Example
 
 ## Installation
-Requires [wxWidgets](https://www.wxwidgets.org/downloads/) GUI library 
+Requires [wxWidgets](https://www.wxwidgets.org/downloads/) GUI library. You will probably need to download and build the library from source yourself.
