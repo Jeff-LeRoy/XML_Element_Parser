@@ -10,4 +10,8 @@ A tool to query and list XML nodes of a user defined element name to a listbox. 
 ## Example
 
 ## Installation
-Requires [wxWidgets](https://www.wxwidgets.org/downloads/) GUI library. You will probably need to download and build the library from source yourself.
+Requires [wxWidgets](https://www.wxwidgets.org/downloads/) GUI library. You will probably need to download and build the library from source yourself. I used wxWidgets-3.1.5 for XML_Element_Parser.
+
+Make sure the compiler knows where to look for the header file(s) for the library.
+
+Tell the linker where to look for the library file(s)
