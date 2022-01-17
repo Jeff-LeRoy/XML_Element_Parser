@@ -52,11 +52,11 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
     //GUI buttons and elements
     wxPanel* mainPanel = new wxPanel(this, wxID_ANY);
 
-    m_buttonParse = new wxButton(mainPanel, 101, "Parse", wxPoint(88, 10), wxSize(68, 50));
-    Bind(wxEVT_BUTTON, &MyFrame::OnParse, this, m_buttonParse->GetId());
-
     m_buttonOpen = new wxButton(mainPanel, 102, "Open XML", wxPoint(10, 10), wxSize(68, 50));
     Bind(wxEVT_BUTTON, &MyFrame::OnOpen, this, m_buttonOpen->GetId());
+
+    m_buttonParse = new wxButton(mainPanel, 101, "Parse", wxPoint(88, 10), wxSize(68, 50));
+    Bind(wxEVT_BUTTON, &MyFrame::OnParse, this, m_buttonParse->GetId());
 
     m_buttonClear = new wxButton(mainPanel, 103, "Clear", wxPoint(166, 10), wxSize(68, 50));
     Bind(wxEVT_BUTTON, &MyFrame::OnClear, this, 103);
