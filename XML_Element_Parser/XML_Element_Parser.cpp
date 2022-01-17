@@ -28,7 +28,7 @@ bool MyApp::OnInit()
     return true;
 }
 
-//Delegating constructors
+//Delegating constructor
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
     //File menu item
@@ -150,7 +150,6 @@ void MyFrame::RecursiveElementSearch(wxXmlNode* node)
         {
             MyFrame::RecursiveElementSearch(node->GetChildren());
         }
-
         node = node->GetNext();
     }
 }
@@ -158,7 +157,6 @@ void MyFrame::RecursiveElementSearch(wxXmlNode* node)
 void MyFrame::copy(wxKeyEvent& event)
 {
     wxChar key = event.GetUnicodeKey();
-    GetStatusBar();
 
     if (key == 'C' && event.ControlDown())
     {
