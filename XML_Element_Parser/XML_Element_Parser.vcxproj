@@ -24,6 +24,9 @@
   <ItemGroup>
     <ClCompile Include="XML_Element_Parser.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="To_Do.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
