@@ -15,19 +15,6 @@
 #include "XML_Element_Parser.h"
 #include <wx/strconv.h>
 
-//Main
-wxIMPLEMENT_APP(MyApp);
-
-//Entry point of our application
-bool MyApp::OnInit()
-{
-    //Create an instance of class MyFrame
-    MyFrame* frame = new MyFrame{ "XML Element Parser", wxPoint(100, 100), wxSize(260, 500) };
-    frame->Centre(wxBOTH);
-    frame->Show(true);
-    return true;
-}
-
 //Delegating constructor
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
@@ -168,5 +155,18 @@ void MyFrame::copy(wxKeyEvent& event)
             wxTheClipboard->Close();
         }
     }
+}
+
+//Main
+wxIMPLEMENT_APP(MyApp);
+
+//Entry point of our application
+bool MyApp::OnInit()
+{
+    //Create an instance of class MyFrame
+    MyFrame* frame = new MyFrame{ "XML Element Parser", wxPoint(100, 100), wxSize(260, 500) };
+    frame->Centre(wxBOTH);
+    frame->Show(true);
+    return true;
 }
 
