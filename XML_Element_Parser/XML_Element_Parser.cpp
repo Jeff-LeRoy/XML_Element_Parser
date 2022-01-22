@@ -18,6 +18,8 @@
 //Delegating constructor
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
+    SetBackgroundColour(wxColour(175, 175, 175));
+
     wxBoxSizer* sizerMain = new wxBoxSizer(wxVERTICAL);
     wxBoxSizer* sizerButtons = new wxBoxSizer(wxHORIZONTAL);
 
@@ -39,9 +41,6 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
     //Status bar    
     wxStatusBar* statusBar = CreateStatusBar();
 
-    //GUI buttons and elements
-    //wxPanel* mainPanel = new wxPanel(this, wxID_ANY);
-
     sizerButtons->Add(
         new wxButton(this, 102, "Open XML", wxDefaultPosition, wxSize(68, 50)),
         0,
@@ -56,10 +55,6 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
         new wxButton(this, 103, "Clear", wxDefaultPosition, wxSize(68, 50)),
         0,
         wxALL, 10);
-
-    //m_buttonOpen = new wxButton(mainPanel, 102, "Open XML", wxPoint(10, 10), wxSize(68, 50));
-    //m_buttonParse = new wxButton(mainPanel, 101, "Parse", wxPoint(88, 10), wxSize(68, 50));
-    //m_buttonClear = new wxButton(mainPanel, 103, "Clear", wxPoint(166, 10), wxSize(68, 50));
 
     m_entryLabel = new wxStaticText(this, wxID_ANY, "Print Elements With Name :", wxPoint(10, 95), wxSize(150, 15));
     m_textEntry = new wxTextCtrl(this, wxID_ANY, "", wxPoint(10, 110), wxSize(224, 20));
