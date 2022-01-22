@@ -45,17 +45,17 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
     sizerButtons->Add(
         new wxButton(this, 102, "Open XML", wxDefaultPosition, wxSize(68, 50)),
         0,
-        wxLEFT | wxRIGHT, 10);
+        wxALL, 10);
 
     sizerButtons->Add(
         new wxButton(this, 101, "Parse", wxDefaultPosition, wxSize(68, 50)),
         0,
-        wxLEFT | wxRIGHT, 10);
+        wxALL, 10);
 
     sizerButtons->Add(
         new wxButton(this, 103, "Clear", wxDefaultPosition, wxSize(68, 50)),
         0,
-        wxLEFT | wxRIGHT, 10);
+        wxALL, 10);
 
     //m_buttonOpen = new wxButton(mainPanel, 102, "Open XML", wxPoint(10, 10), wxSize(68, 50));
     //m_buttonParse = new wxButton(mainPanel, 101, "Parse", wxPoint(88, 10), wxSize(68, 50));
@@ -77,10 +77,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
     sizerMain->Add(m_TextFileLocation, 0, wxEXPAND | wxALL, 3);
     sizerMain->Add(m_listBox1, 1, wxEXPAND | wxALL, 3);
 
-
     SetSizerAndFit(sizerMain);
-
-
 }
 
 void MyFrame::OnOpen(wxCommandEvent& event)
