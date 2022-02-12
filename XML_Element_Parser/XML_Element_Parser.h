@@ -1,6 +1,5 @@
 #pragma once
 
-//new class derived from wxApp, overiding wxApp::OnInit so program can be initialized
 class MyApp : public wxApp
 {
 public:
@@ -8,7 +7,6 @@ public:
 };
 
 
-//New class derived from wxFrame, a must have top-level window
 class MyFrame : public wxFrame
 {
 public:

@@ -12,13 +12,12 @@
 #include <wx/event.h>
 #include <wx/filedlg.h>
 #include <wx/clipbrd.h>
-#include "XML_Element_Parser.h"
 #include <wx/strconv.h>
+#include "XML_Element_Parser.h"
 
-//Delegating constructor
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
-    SetBackgroundColour(wxColour(175, 175, 175));
+    SetBackgroundColour(wxColour(240, 240, 240));
 
     wxBoxSizer* sizerMain = new wxBoxSizer(wxVERTICAL);
     wxBoxSizer* sizerButtons = new wxBoxSizer(wxHORIZONTAL);
@@ -41,20 +40,13 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
     //Status bar    
     wxStatusBar* statusBar = CreateStatusBar();
 
+    //Add buttons to sizer
     sizerButtons->Add(
-        new wxButton(this, 102, "Open XML", wxDefaultPosition, wxSize(68, 50)),
-        0,
-        wxALL, 10);
-
+        new wxButton(this, 102, "Open XML", wxDefaultPosition, wxSize(68, 50)), 0, wxALL, 10);
     sizerButtons->Add(
-        new wxButton(this, 101, "Parse", wxDefaultPosition, wxSize(68, 50)),
-        0,
-        wxALL, 10);
-
+        new wxButton(this, 101, "Parse", wxDefaultPosition, wxSize(68, 50)), 0, wxALL, 10);
     sizerButtons->Add(
-        new wxButton(this, 103, "Clear", wxDefaultPosition, wxSize(68, 50)),
-        0,
-        wxALL, 10);
+        new wxButton(this, 103, "Clear", wxDefaultPosition, wxSize(68, 50)), 0, wxALL, 10);
 
     m_entryLabel = new wxStaticText(this, wxID_ANY, "Print Elements With Name :", wxPoint(10, 95), wxSize(150, 15));
     m_textEntry = new wxTextCtrl(this, wxID_ANY, "", wxPoint(10, 110), wxSize(224, 20));
@@ -67,9 +59,9 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size) 
     m_listBox1->Bind(wxEVT_KEY_DOWN, &MyFrame::copy, this);
 
     sizerMain->Add(sizerButtons, 0, wxALIGN_CENTER);
+    sizerMain->Add(m_TextFileLocation, 0, wxEXPAND | wxALL, 3);
     sizerMain->Add(m_entryLabel, 0, wxEXPAND | wxALL, 3);
     sizerMain->Add(m_textEntry, 0, wxEXPAND | wxALL, 3);
-    sizerMain->Add(m_TextFileLocation, 0, wxEXPAND | wxALL, 3);
     sizerMain->Add(m_listBox1, 1, wxEXPAND | wxALL, 3);
 
     SetSizerAndFit(sizerMain);
@@ -177,18 +169,13 @@ void MyFrame::copy(wxKeyEvent& event)
     }
 }
 
-//Main
 wxIMPLEMENT_APP(MyApp);
 
-//Entry point of our application
 bool MyApp::OnInit()
 {
     //Create an instance of class MyFrame
-    MyFrame* frame = new MyFrame{ "XML Element Parser", wxPoint(100, 100), wxSize(260, 500) };
+    MyFrame* frame = new MyFrame{ "XML Element Parser", wxDefaultPosition, wxDefaultSize };
     frame->Centre(wxBOTH);
-
-
-
     frame->Show(true);
     return true;
 }
